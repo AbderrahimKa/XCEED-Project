@@ -5,17 +5,15 @@ This project is a training website built using Python. It provides various featu
 ## Features
 
 - **User Authentication**: Users can create accounts, log in, and manage their profiles.
-- **Courses**: A wide range of courses on different subjects, each containing modules and lessons.
-- **Interactive Lessons**: Engaging lessons with interactive quizzes, exercises, and assignments.
-- **Progress Tracking**: Users can track their progress within each course and across the platform.
-- **Discussion Forums**: Community forums where users can discuss topics, ask questions, and interact with peers.
 - **Admin Panel**: An administrative interface for managing courses, users, and content.
+- **Event Management**: CRUD operations for creating, reading, updating, and deleting events.
+- **News Management**: CRUD operations for creating, reading, updating, and deleting news articles.
 
 ## Technologies Used
 
 - **Python**: The backend of the website is powered by Python, utilizing frameworks such as Django or Flask.
 - **HTML/CSS/JavaScript**: Frontend development is done using these standard web technologies for creating a responsive and interactive user interface.
-- **Database**: The website utilizes a database system (e.g., PostgreSQL, MySQL) for storing user data, course content, and progress information.
+- **Database**: The website utilizes a database system  MySQL for storing user data, course content, and progress information.
 - **Version Control**: Git is used for version control, and the project is hosted on GitHub for collaboration and code management.
 
 ## Getting Started
@@ -31,16 +29,7 @@ This project is a training website built using Python. It provides various featu
     Navigate to the project directory and install the required dependencies:
 
     ```bash
-    pip install -r requirements.txt
-    ```
-
-3. **Database Setup**:
-
-    Configure the database settings in `settings.py` and perform migrations:
-
-    ```bash
-    python manage.py makemigrations
-    python manage.py migrate
+    pipenv sync
     ```
 
 4. **Run the Server**:
@@ -48,7 +37,7 @@ This project is a training website built using Python. It provides various featu
     Start the development server:
 
     ```bash
-    python manage.py runserver
+    python server.py 
     ```
 
 5. **Access the Website**:
