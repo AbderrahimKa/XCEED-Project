@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Fitness &mdash; </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
+	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+	<meta name="author" content="FREEHTML5.CO" />
+
+
+	<meta property="og:title" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:description" content="" />
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/icomoon.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/superfish.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+	<script src="{{url_for('static', filename='js/modernizr-2.6.2.min.js')}}"></script>
+</head>
+
+<body>
+
+	<div>
+		<div id="footer" style="height: 100vh">
+			<div class="container">
+				<div class="col-md-8 animate-box center">
+					<h3 class="section-title">Start Your Journey Now</h3>
+					<form class="contact-form" action="/user/login" method="post">
+						<div class="form-group">
+							<label for="email" class="sr-only">Email</label>
+							<input type="email" class="form-control" name="email" placeholder="Email">
+						</div>
+						<div class="form-group">
+							<label for="password" class="sr-only">Password</label>
+							<input type="password" class="form-control" name="password" placeholder="Password">
+						</div>
+						<div class="form-group">
+							<input type="submit" id="btn-login" class="btn btn-send-message btn-md" value="Log In">
+							<span class="new-to-site" style="padding-left: 60%;">
+								Create un Account <a href="/sign_up">Sign Up</a>
+							</span>
+						</div>
+					</form>
+					{% with messages = get_flashed_messages() %}
+					{% if messages %}
+					<div class="error-message">
+						{% for message in messages %}
+						<p>{{ message }}</p>
+						{% endfor %}
+					</div>
+					{% endif %}
+					{% endwith %}
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/jquery.easing.1.3.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/jquery.waypoints.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/jquery.stellar.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/hoverIntent.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/superfish.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+
+</body>
+
+</html>

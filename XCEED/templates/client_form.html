@@ -1,0 +1,301 @@
+
+<!DOCTYPE html>
+
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Fitness &mdash; </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
+	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+	<meta name="author" content="FREEHTML5.CO" />
+
+
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/icomoon.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/superfish.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+	<script src="{{url_for('static', filename='js/modernizr-2.6.2.min.js')}}"></script>
+
+	</head>
+	<body>
+
+        <div> 
+			<div id="footer" style="height: 100%;">
+				<div class="container center">
+						<div class="col-md-12">
+							<h3 class="section-title text-center">Fill This Form</h3>
+							<form action="/user/form" method="post">
+                                <div class="form-group">
+                                    <label for="full_name" style="color: white;">Full Name:</label>
+                                    <input type="text" class="form-control" name="full_name" placeholder="Full Name" value="{{user.first_name + ' ' +  user.last_name}}">
+                                </div>
+                            
+                                <div class="form-group">
+                                    <label for="email" style="color: white;">Email:</label>
+                                    <input type="email" class="form-control" name="email" placeholder="Email" value="{{user.email}}">
+                                </div>
+                            
+                                <div class="form-group">
+                                    <label for="date_of_birth" style="color: white;">Date of Birth:</label>
+                                    <input type="date" class="form-control" name="date_of_birth"
+                                        placeholder="Date of Birth">
+                                </div>
+                            
+                                <div class="form-group">
+                                    <label for="gender" style="color: white;">Gender:</label>
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input" name="gender" id="male" value="Male">
+                                        <label class="form-check-label" for="male">Male</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input" name="gender" id="female" value="Female">
+                                        <label class="form-check-label" for="female">Female</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input" name="gender" id="other" value="Other">
+                                        <label class="form-check-label" for="other">Other</label>
+                                    </div>
+                                </div>
+                                
+                            
+                                <div class="form-group">
+                                    <label for="country" style="color: white;">Country:</label>
+                                    <input type="text" class="form-control" name="country" placeholder="Country">
+                                </div>
+                            
+                                <div class="form-group">
+                                    <label for="number" style="color: white;">WhatsApp Number:</label>
+                                    <input type="text" class="form-control" name="phone_number" placeholder="Number">
+                                </div>
+                            
+                                <div class="form-group">
+                                    <label for="goal" style="color: white;">What would you like to achieve?</label><br>
+                                    What motivates you to follow our customized training program and/or nutrition plan?
+                                
+                                    <select class="form-control" name="goal">
+                                        <option value="health_improved">Health has improved—feel more energetic, stronger, and overall well.</option>
+                                        <option value="body_composition_improved">My body composition has improved—I've refined my silhouette, shed excess weight, and feel better.</option>
+                                        <option value="performance_surged">My performance has surged—personal records, improved endurance, strength, recovery, and learned new skills.</option>
+                                    </select>
+                                </div>
+                                
+                            
+                                <div class="form-group">
+                                    <label for="motivation" style="color: white;">Why do you want to achieve this goal ?</label><br>
+                                    What's your motivation for this achievement ?
+                                    <input type="text" class="form-control" name="motivition" placeholder="Motivation">
+                                </div>
+                            
+                                <div class="form-group">
+                                    <label for="goal_details" style="color: white;">What do you hope specifically to achieve with our coaching system?</label><br>
+                                    Describe your goal in details
+                                    <input type="text" class="form-control" name="goal_details"
+                                        placeholder="Goal Details">
+                                </div>
+                            
+                                <div class="form-group">
+                                    <label for="coaching_type" style="color: white;">What is your preference to get coached by?</label>
+                                    <select class="form-control" name="coaching_type">
+                                        <option value="remote_coaching">Remote Coaching</option>
+                                        <option value="in_person_coaching">In-Person Coaching</option>
+                                        <option value="hybrid_coaching">Hybrid Coaching (Online and In-Person)</option>
+                                    </select>
+                                </div>
+                                
+                            
+                                <div class="form-group">
+                                    <label for="weight" style="color: white;">What's your current weight ? KG.</label>
+                                    <input type="text" class="form-control" name="weight" placeholder="Weight">
+                                </div>
+                            
+                                <div class="form-group">
+                                    <label for="height" style="color: white;">How tall you are ? CM.</label>
+                                    <input type="text" class="form-control" name="height" placeholder="Height">
+                                </div>
+                            
+                                <div class="form-group">
+                                    <label for="activity_level" style="color: white;">What is your activity level?</label><br>
+                                    By moving throughout the day, your body also burns energy
+                                
+                                    <select class="form-control" name="activity_level">
+                                        <option value="sedentary">Sedentary (You have an office job, sit all day, get no formal exercise, and are not physically active during the day)</option>
+                                        <option value="light_active">Light Active (You perform lifestyle activities like gardening, shopping, etc., and exercise 1 to 3 times a week)</option>
+                                        <option value="moderate_active">Moderate Active (Standing work, moving all day, exercise 3 to 5 times a week)</option>
+                                        <option value="very_active">Very Active (Strenuous work, exercise 5 to 7 times a week)</option>
+                                    </select>
+                                </div>
+                                
+                            
+                                <div class="form-group">
+                                    <label for="hours_of_sleep" style="color: white;">What's your average hours of sleep do you get per night along the week?</label>
+                                    
+                                    <select class="form-control" name="hours_of_sleep">
+                                        <option value="4-6_hours">4-6 hours</option>
+                                        <option value="6-8_hours">6-8 hours</option>
+                                        <option value="8-10_hours">8-10 hours</option>
+                                        <option value="10_hours_plus">10 hours +</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="default_workout_time" style="color: white;">When do you usually workout ?</label>
+                                    
+                                    <select class="form-control" name="default_workout_time">
+                                        <option value="4-6_hours">Early morning</option>
+                                        <option value="6-8_hours">Morning</option>
+                                        <option value="8-10_hours">Afternoon</option>
+                                        <option value="10_hours_plus">Evening</option>
+                                        <option value="10_hours_plus">Late evening</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="meals_per_day" style="color: white;">How many meal do you eat each day ?</label>
+                                    
+                                    <select class="form-control" name="meals_per_day">
+                                        <option value="4-6_hours">1-2 meals</option>
+                                        <option value="6-8_hours">2-3 meals</option>
+                                        <option value="8-10_hours">3-4 meals</option>
+                                        <option value="10_hours_plus">4-5 meals</option>
+                                        <option value="10_hours_plus">5 meals</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="forbidden_food" style="color: white;">Are there any foods you will not eat due to sensitivities, allergies, or religious reasons?</label>
+                                    <input type="text" class="form-control" name="forbidden_food"
+                                        placeholder="Forbidden Food">
+                                </div>
+                            
+                                <div class="form-group">
+                                    <label for="training_experience" style="color: white;">What is your training experience?</label>
+                                    
+                                    <select class="form-control" name="training_experience">
+                                        <option value="beginner">Beginner: 0 to 3 years of structured training</option>
+                                        <option value="intermediate">Intermediate: 3 to 6 years roughly training experience</option>
+                                        <option value="advanced">Advanced: 6+ years of hard training</option>
+                                    </select>
+                                </div>
+                                
+                            
+                                <div class="form-group">
+                                    <label for="default_activity" style="color: white;">Do you play any sports or participate in any other activities ?</label>
+                                    <input type="text" class="form-control" name="default_activity"
+                                        placeholder="Default Activity">
+                                </div>
+                            
+                                <div class="form-group">
+                                    <label for="previous_medical_history" style="color: white;">Have you been diagnosed (currently or in the past) with any significant medical condition(s) and / or injury (es) ?</label><br>
+                                    Yes or No, If so, what ?
+                                    <input type="text" class="form-control" name="previous_medical_history"
+                                        placeholder="Previous Medical History">
+                                </div>
+                            
+                                <div class="form-group">
+                                    <label for="default_health_concerns" style="color: white;">Right now, do you have any specific health concerns, such as illnesses, pain, and / or injuries? or taking any medications, either over-the-counter or prescription?</label><br>
+                                    Yes or No, If so, what ?
+                                    <input type="text" class="form-control" name="default_health_concerns"
+                                        placeholder="Default Health Concerns">
+                                </div>
+                            
+                                <div class="form-group">
+                                    <label for="about_yourself" style="color: white;">Is there anything else about yourself that you would like to share with us to help in building plan ?</label>
+                                    <textarea class="form-control" name="about_yourself"
+                                        placeholder="About Yourself"></textarea>
+                                </div>
+                            
+                                <div class="form-group">
+                                    <label for="from_where" style="color: white;">How did you hear about us:</label>
+                                
+                                    <select class="form-control" name="from_where" id="from_where">
+                                        <option value="friends_family">Friends / Family</option>
+                                        <option value="instagram">Instagram</option>
+                                        <option value="search_engine">Search engine</option>
+                                        <option value="website">Website</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                
+                                    <div id="other_source" style="display: none;">
+                                        <label for="other_source_input">Please specify:</label>
+                                        <input type="text" class="form-control" name="from_where" id="other_source_input" placeholder="Other Source">
+                                    </div>
+                                </div>
+                                
+                                <script>
+                                    document.getElementById("from_where").addEventListener("change", function() {
+                                        var otherSourceDiv = document.getElementById("other_source");
+                                        var otherSourceInput = document.getElementById("other_source_input");
+                                
+                                        if (this.value === "other") {
+                                            otherSourceDiv.style.display = "block";
+                                            otherSourceInput.setAttribute("required", "true");
+                                        } else {
+                                            otherSourceDiv.style.display = "none";
+                                            otherSourceInput.removeAttribute("required");
+                                        }
+                                    });
+                                </script>
+                                
+                            
+                                <div class="form-group">
+                                    <label for="additional_question" style="color: white;">Let me know if you have a question or suggestion or additional information :</label>
+                                    <textarea class="form-control" name="additional_question"
+                                        placeholder="Additional Question"></textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <label style="color: white;">
+                                        I recognize that it is my responsibility to work directly with my health care provider before, during, and after seeking nutrition and/or fitness consultation. 
+                                        Any information provided is not to be followed without prior approval of your doctor. 
+                                        If you choose to use this information without such approval, you agree to accept full responsibility for your decision.
+                                        <br><br>
+                                        I am aware of the risks in observing or participating in the activities offered and getting involved in and I understand that all sports or 
+                                        fitness that I will execute and participate in are entirely at my own risk and perils. I assume complete responsibility and liability for those 
+                                        risks and for the injuries that may occur as a result of these risks, even if injuries occur in a manner that is not foreseeable at the time I agree to this agreement. 
+                                        I realize that by voluntarily assuming the risks involved, I will be solely responsible for any loss or damage I sustain, including personal injuries to me, damage to my property, or any damage.
+                                        <br><br><input type="radio" name="agree_terms" id="agree_terms" required> I agree
+                                    </label>
+                                </div>
+                                
+                            
+                                <div class="form-group">
+                                    <input type="submit" class="btn btn-primary" value="Submit">
+                                </div>
+                            </form>
+						</div>
+				</div>
+			</div>
+		</div>
+
+
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.easing.1.3.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.waypoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.stellar.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/hoverIntent.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/superfish.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    
+    
+	</body>
+</html>
+
