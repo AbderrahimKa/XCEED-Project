@@ -42,7 +42,7 @@ This project is a training website built using Python. It provides various featu
 
 5. **Access the Website**:
 
-    Open your web browser and go to `http://localhost:8000` to access the website.
+    Open your web browser and go to `http://localhost:5000` to access the website.
 
 ## Contributing
 
